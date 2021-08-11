@@ -1,0 +1,22 @@
+name:first
+
+on: push
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+    -run: date
+  ubuntu:ubuntu-latest
+    steps:
+    -run: date
+  macos:
+    runs-on: windows-latest
+    steps:
+    -run: date
+  depends:
+    needs: [windows, ubuntu, macos]
+    runs-on: windows-latest
+    steps:
+    -run: ls -l
+  
