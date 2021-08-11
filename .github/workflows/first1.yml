@@ -6,16 +6,16 @@ jobs:
   windows:
     runs-on: windows-latest
     steps:
-    -run: date
+    - run: date
   ubuntu:ubuntu-latest
     steps:
-    -run: date
+    - run: date
   macos:
     runs-on: windows-latest
     steps:
-    -run: date
+    - run: date
   depends:
     needs: [windows, ubuntu, macos]
     runs-on: windows-latest
     steps:
-    -run: ls -l
+    - run: ls -l
