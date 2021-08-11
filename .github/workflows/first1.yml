@@ -1,13 +1,13 @@
-name:first
+name: first1
 
-on:push
-
+on: push
 jobs:
   windows:
     runs-on: windows-latest
     steps:
     - run: date
-  ubuntu:ubuntu-latest
+  ubuntu: 
+    runs-on: windows-latest
     steps:
     - run: date
   macos:
